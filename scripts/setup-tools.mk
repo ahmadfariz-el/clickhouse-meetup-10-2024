@@ -7,7 +7,9 @@ brew-common:
 	brew list k9s || brew install k9s
 	brew list fluxcd/tap/flux || brew install fluxcd/tap/flux
 	brew list kind || brew install kind
+	brew install postgresql
+	brew install telepresenceio/telepresence/telepresence-oss
 
 python-common:
-	pip install kafka-python
-	pip install psycopg2-binary
+	pip3 install kafka-python
+	pip3 install psycopg2-binary

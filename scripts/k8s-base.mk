@@ -1,6 +1,6 @@
 # K8s support
 
-KIND              := kindest/node:v1.26.3
+KIND              := kindest/node:v1.32.2
 TELEPRESENCE      := docker.io/datawire/tel2:2.17.0
 
 FLUXCD-SOURCE := ghcr.io/fluxcd/source-controller:v1.1.2
@@ -37,7 +37,7 @@ KIND_CLUSTER := clickhouse-starter-cluster
 
 k8s-create-cluster:
 	kind create cluster \
-    		--image kindest/node:v1.26.3@sha256:61b92f38dff6ccc29969e7aa154d34e38b89443af1a2c14e6cfbd2df6419c66f \
+    		--image kindest/node:v1.32.2@sha256:f226345927d7e348497136874b6d207e0b32cc52154ad8323129352923a3142f \
     		--name $(KIND_CLUSTER) \
 
 	kubectl wait --timeout=120s --namespace=local-path-storage --for=condition=Available deployment/local-path-provisioner

@@ -10,7 +10,8 @@ make setup-tools
 * What it does: Installs kubectl, kustomize, k9s, flux, and necessary Python libraries for interacting with Kafka and PostgreSQL.
 
 ## 2. Create Kubernetes Cluster
-Create the local Kubernetes cluster using kind:
+Ensure the Docker daemon is running. If using Docker Desktop, just open the Docker Desktop application.
+Then, Create the local Kubernetes cluster using kind:
 ```shell
 make k8s-create-cluster
 ```
